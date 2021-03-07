@@ -1,6 +1,10 @@
 # project_manager
 
-A new Flutter project.
+This is my flutter aplication to use as portfolio.
+stil on progress!
+
+contain 3 screens with a simple splash screen, sign in screen and home screen(on progress)
+doesn't have backend integration until this moment, but it is in progress with Firebase.
 
 ## Getting Started
 
