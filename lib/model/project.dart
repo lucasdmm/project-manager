@@ -10,5 +10,5 @@ class Project {
   final List<Member> _memberList;
 
   Project(this._name, this._discription, this._startDate, this._endDate,
-      this._price, this._risk);
+      this._price, this._risk, this._memberList);
 }
