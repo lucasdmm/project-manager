@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 class Home extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
+    double width = MediaQuery.of(context).size.width;
     return Scaffold(
       appBar: AppBar(
         title: Text(
@@ -20,14 +21,12 @@ class Home extends StatelessWidget {
               children: [
                 Container(
                   height: 340,
-                  width: 900,
-                  child: FittedBox(
-                    fit: BoxFit.scaleDown,
-                    child: Opacity(
-                      opacity: 0.5,
-                      child: Image.asset(
-                        'assets/home-image.png',
-                      ),
+                  width: width,
+                  child: Opacity(
+                    opacity: 0.5,
+                    child: Image.asset(
+                      'assets/home-image.png',
+                      fit: BoxFit.fitWidth,
                     ),
                   ),
                 ),
