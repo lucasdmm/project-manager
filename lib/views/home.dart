@@ -13,70 +13,92 @@ class Home extends StatelessWidget {
         ),
       ),
       body: Container(
-        child: Column(
-          children: [
-            Card(
-              margin: EdgeInsets.all(10),
-              shadowColor: Theme.of(context).primaryColor,
-              elevation: 3,
-              child: ListTile(
-                onTap: () {},
-                hoverColor: Colors.grey[300],
-                contentPadding: EdgeInsets.all(10),
-                leading: Icon(
-                  Icons.engineering_sharp,
-                  color: Theme.of(context).primaryColor,
-                  size: 40,
+        child: Stack(children: [
+          SafeArea(
+            child: Column(
+              mainAxisAlignment: MainAxisAlignment.end,
+              children: [
+                Container(
+                  height: 340,
+                  width: 900,
+                  child: FittedBox(
+                    fit: BoxFit.scaleDown,
+                    child: Opacity(
+                      opacity: 0.5,
+                      child: Image.asset(
+                        'assets/home-image.png',
+                      ),
+                    ),
+                  ),
                 ),
-                title: Text(
-                  'Create new Project',
-                  style: TextStyle(
-                      color: Colors.black54, fontWeight: FontWeight.bold),
+              ],
+            ),
+          ),
+          Column(
+            children: [
+              Card(
+                margin: EdgeInsets.all(10),
+                shadowColor: Theme.of(context).primaryColor,
+                elevation: 3,
+                child: ListTile(
+                  onTap: () {},
+                  hoverColor: Colors.grey[300],
+                  contentPadding: EdgeInsets.all(10),
+                  leading: Icon(
+                    Icons.engineering_sharp,
+                    color: Theme.of(context).primaryColor,
+                    size: 40,
+                  ),
+                  title: Text(
+                    'Create new Project',
+                    style: TextStyle(
+                        color: Colors.black54, fontWeight: FontWeight.bold),
+                  ),
                 ),
               ),
-            ),
-            Card(
-              margin: EdgeInsets.all(10),
-              shadowColor: Theme.of(context).primaryColor,
-              elevation: 3,
-              child: ListTile(
-                onTap: () {},
-                hoverColor: Colors.grey[300],
-                contentPadding: EdgeInsets.all(10),
-                leading: Icon(
-                  Icons.list_alt_outlined,
-                  color: Theme.of(context).primaryColor,
-                  size: 40,
-                ),
-                title: Text(
-                  'All Project',
-                  style: TextStyle(
-                      color: Colors.black54, fontWeight: FontWeight.bold),
-                ),
-              ),
-            ),
-            Card(
-              margin: EdgeInsets.all(10),
-              shadowColor: Theme.of(context).primaryColor,
-              elevation: 3,
-              child: ListTile(
-                onTap: () {},
-                hoverColor: Colors.grey[300],
-                contentPadding: EdgeInsets.all(10),
-                leading: Icon(
-                  Icons.list_alt_outlined,
-                  color: Theme.of(context).primaryColor,
-                  size: 40,
-                ),
-                title: Text(
-                  'All Project',
-                  style: TextStyle(
-                      color: Colors.black54, fontWeight: FontWeight.bold),
+              Card(
+                margin: EdgeInsets.all(10),
+                shadowColor: Theme.of(context).primaryColor,
+                elevation: 3,
+                child: ListTile(
+                  onTap: () {},
+                  hoverColor: Colors.grey[300],
+                  contentPadding: EdgeInsets.all(10),
+                  leading: Icon(
+                    Icons.list_alt_outlined,
+                    color: Theme.of(context).primaryColor,
+                    size: 40,
+                  ),
+                  title: Text(
+                    'All Project',
+                    style: TextStyle(
+                        color: Colors.black54, fontWeight: FontWeight.bold),
+                  ),
                 ),
               ),
-            ),
-          ],
-        ),
+              Card(
+                margin: EdgeInsets.all(10),
+                shadowColor: Theme.of(context).primaryColor,
+                elevation: 3,
+                child: ListTile(
+                  onTap: () {},
+                  hoverColor: Colors.grey[300],
+                  contentPadding: EdgeInsets.all(10),
+                  leading: Icon(
+                    Icons.switch_account,
+                    color: Theme.of(context).primaryColor,
+                    size: 40,
+                  ),
+                  title: Text(
+                    'Workers',
+                    style: TextStyle(
+                        color: Colors.black54, fontWeight: FontWeight.bold),
+                  ),
+                ),
+              ),
+            ],
+          ),
+        ]),
       ),
     );
   }
